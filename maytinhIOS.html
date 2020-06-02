@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy Tính IOS</title>
+</head>
+<body>
+
+<div name="calculator">
+    <input id="screen">
+    </br>
+    <button type="button" onclick="clearScreen()">AC</button>
+    <button type="button" onclick="numberInsert()">|</button>
+    <button type="button" onclick="numberInsert()">%</button>
+    <button type="button" onclick="numberInsert('/')">/</button>
+    </br>
+    <button type="button" onclick="numberInsert(7)">7</button>
+    <button type="button" onclick="numberInsert(8)">8</button>
+    <button type="button" onclick="numberInsert(9)">9</button>
+    <button type="button" onclick="numberInsert('*')">x</button>
+    </br>
+    <button type="button" onclick="numberInsert(4)">4</button>
+    <button type="button" onclick="numberInsert(5)">5</button>
+    <button type="button" onclick="numberInsert(6)">6</button>
+    <button type="button" onclick="numberInsert('-')">-</button>
+    </br>
+    <button type="button" onclick="numberInsert(1)">1</button>
+    <button type="button" onclick="numberInsert(2)">2</button>
+    <button type="button" onclick="numberInsert(3)">3</button>
+    <button type="button" onclick="numberInsert('+')">+</button>
+    </br>
+    <button type="button" onclick="numberInsert(0)">0</button>
+    <button type="button" onclick="numberInsert(.)">.</button>
+    <button type="button" onclick="delNumber()"><</button>
+    <button type="button" onclick="equal()">=</button>
+</div>
+
+
+<script>
+         let numberInt = document.getElementById('screen');
+         function numberInsert(value) {
+             numberInt.value += value;
+         }
+         function delNumber() {
+             numberInt.value = numberInt.value.substring(0,numberInt.value.length - 1);
+         }
+         function clearScreen() {
+             numberInt.value = "";
+         }
+         function equal() {
+             numberInt.value = eval(numberInt.value);
+         }
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
